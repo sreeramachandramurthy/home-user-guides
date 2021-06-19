@@ -6,5 +6,6 @@ User Guides for Home Setup
   - [Static IP](centos/static-ip.md)
   - [SSH Banner](centos/ssh-banner.md)
   - [Change Hostname](centos/change-hostname.md)
+  - [Disable Sleep](centos/disable-sleep.md)
   - [Install Java 8](centos/install-java-8.md)
   - [Install MongoDB](centos/install-mongodb.md)
