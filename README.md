@@ -7,5 +7,6 @@ User Guides for Home Setup
   - [SSH Banner](centos/ssh-banner.md)
   - [Change Hostname](centos/change-hostname.md)
   - [Disable Sleep](centos/disable-sleep.md)
+  - [Temperature Sensors](centos/temperature-sensors.md)
   - [Install Java 8](centos/install-java-8.md)
   - [Install MongoDB](centos/install-mongodb.md)
