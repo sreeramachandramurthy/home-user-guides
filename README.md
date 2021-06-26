@@ -10,3 +10,4 @@ User Guides for Home Setup
   - [Temperature Sensors](centos/temperature-sensors.md)
   - [Install Java 8](centos/install-java-8.md)
   - [Install MongoDB](centos/install-mongodb.md)
+  - [Install Robo3T](centos/install-robo3t.md)
