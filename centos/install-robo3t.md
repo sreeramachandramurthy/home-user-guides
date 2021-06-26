@@ -3,7 +3,7 @@
 ## Table of Contents
 
 1. [Installation](#installation)
-2. [Running Robo3T](#running-robo-3t)
+2. [Running Robo3T](#running-robo3t)
 3. [Workaroud for CentOS](#workaround-for-centos)
 4. [Add Robo3T to Applications](#add-robo3t-to-applications)
 
@@ -35,7 +35,7 @@
 
 ## Workaround for CentOS
 
-Robo 3T 1.4.x fails to run in CentOS with the below error. The linux version of Robo3T supports only Ubuntu. To run on, CentOS execute the following commands in a new Terminal.
+Robo 3T 1.4.x fails to run in CentOS with the below error. The linux version of Robo3T supports only Ubuntu. To run on CentOS, execute the following commands in a new Terminal.
 
 > robo3t: error while loading shared libraries: libcurl-gnutls.so.4: cannot open shared object file: No such file or directory
 
