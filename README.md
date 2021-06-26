@@ -11,3 +11,4 @@ User Guides for Home Setup
   - [Install Java 8](centos/install-java-8.md)
   - [Install MongoDB](centos/install-mongodb.md)
   - [Install Robo3T](centos/install-robo3t.md)
+  - [Install Visual Studio Code](centos/install-vscode.md)
