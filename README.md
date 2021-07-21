@@ -1,6 +1,6 @@
-# home-user-guides
+# Home User Guides
 
-User Guides for Home Setup
+## User Guides for Home Setup
 
 - CentOS
   - [Static IP](centos/static-ip.md)
@@ -12,3 +12,4 @@ User Guides for Home Setup
   - [Install MongoDB](centos/install-mongodb.md)
   - [Install Robo3T](centos/install-robo3t.md)
   - [Install Visual Studio Code](centos/install-vscode.md)
+  - [Install Docker](centos/install-docker.md)
