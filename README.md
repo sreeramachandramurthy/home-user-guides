@@ -13,3 +13,4 @@
   - [Install Robo3T](centos/install-robo3t.md)
   - [Install Visual Studio Code](centos/install-vscode.md)
   - [Install Docker](centos/install-docker.md)
+  - [Install Docker Compose](centos/install-docker-compose.md)

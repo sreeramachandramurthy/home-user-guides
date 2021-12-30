@@ -12,7 +12,8 @@
     2. [Add User to the Docker Group](#add-user-to-the-docker-group)
     3. [Verify](#verify)
 3. [Start on Boot](#start-on-boot)
-4. [References](#references)
+4. [Uninstall Docker Engine](#uninstall-docker-engine)
+5. [References](#references)
 
 ## Direct Installation
 
@@ -104,6 +105,20 @@ To disable this behavior, use disable instead.
 `sudo systemctl disable docker.service`
 
 `sudo systemctl disable containerd.service`
+
+## Uninstall Docker Engine
+
+To uninstall the Docker Engine, CLI, and Containerd packages, run the below command
+
+`sudo yum remove docker-ce docker-ce-cli containerd.io`
+
+Images, containers, volumes, or customized configuration files on your host are not automatically removed. To delete all images, containers, and volumes, run the below command
+
+`sudo rm -rf /var/lib/docker`
+
+`sudo rm -rf /var/lib/containerd`
+
+You must delete any edited configuration files manually.
 
 ## References
 
