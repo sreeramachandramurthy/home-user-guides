@@ -21,13 +21,15 @@ gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc
 
 `/etc/mongod.conf`
 
+Change `bindIp` to the ip address of the machine.
+
 ## Service
 
 `sudo systemctl enable mongod`
 
 `sudo systemctl start mongod`
 
-`sudo systemctl reload mongod`
+`sudo systemctl restart mongod`
 
 `sudo systemctl stop mongod`
 
@@ -50,3 +52,4 @@ gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc
 ## References
 
 - [MongoDB Docs](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/)
+- [MongoDB 4.2 Docs](https://docs.mongodb.com/v4.2/tutorial/install-mongodb-on-red-hat/)
