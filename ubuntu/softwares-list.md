@@ -17,3 +17,4 @@
 * PuddleTag
 * Sublime Text
 * Termius
+* BitWarden
