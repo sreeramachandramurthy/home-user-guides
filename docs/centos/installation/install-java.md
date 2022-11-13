@@ -1,6 +1,6 @@
-# Install Java 1.8
+# Install Java
 
-## Installation Steps
+## Installation Steps for Java 1.8
 
 * Open Terminal
 * Run `yum install java-1.8.0-openjdk.x86_64`

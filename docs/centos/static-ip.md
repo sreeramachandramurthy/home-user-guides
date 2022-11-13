@@ -2,7 +2,9 @@
 
 * Open Terminal
 * Navigate to the Network Scripts
-`cd /etc/sysconfig/network-scripts`
+
+    `cd /etc/sysconfig/network-scripts`
+
 * Edit file `vi ifcfg-eth0` (or respective network adapter)
 
 ```txt
