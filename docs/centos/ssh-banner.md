@@ -1,8 +1,7 @@
 # Customizing SSH Banner Message
 
-Open Terminal and run the following commands
-
-`vi /etc/greetings.txt`
+* Open Terminal
+* Edit file `vi /etc/greetings.txt`
 
 ```txt
 #####################################
@@ -10,10 +9,10 @@ Open Terminal and run the following commands
 #####################################
 ```
 
-`vi /etc/ssh/sshd_config`
+* Edit file `vi /etc/ssh/sshd_config`
 
 ```txt
 Banner /etc/greetings.txt
 ```
 
-`systemctl restart sshd`
+* Restart service `systemctl restart sshd`

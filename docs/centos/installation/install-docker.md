@@ -1,36 +1,18 @@
 # Install Docker CE
 
-## Table of Contents
-
-1. [Direct Installation](#direct-installation)
-    1. [Setup the YUM Repository](#setup-the-yum-repository)
-    2. [Install Docker Engine](#install-docker-engine)
-    3. [Start Docker](#start-docker)
-    4. [Verify Docker Engine](#verify-docker-engine)
-2. [Post Installtion](#post-installation)
-    1. [Create the Docker Group](#create-the-docker-group)
-    2. [Add User to the Docker Group](#add-user-to-the-docker-group)
-    3. [Verify](#verify)
-3. [Start on Boot](#start-on-boot)
-4. [Uninstall Docker Engine](#uninstall-docker-engine)
-5. [References](#references)
-
 ## Direct Installation
 
 Install and update Docker from the YUM repository.
 
 ### Setup the YUM Repository
 
-Install the `yum-utils` package (which provides the `yum-config-manager` utility) and set up the repository.
-
+* Install the `yum-utils` package (which provides the `yum-config-manager` utility) and set up the repository.
 `sudo yum install -y yum-utils`
-
-`sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo`
+* Run `sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo`
 
 ### Install Docker Engine
 
-Install the latest version of Docker Engine and containerd
-
+* Install the latest version of Docker Engine and containerd
 `sudo yum install docker-ce docker-ce-cli containerd.io`
 
 If prompted to accept the GPG key, verify that the fingerprint matches `060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35`, and if so, accept it.
@@ -39,11 +21,11 @@ Docker is installed but not started. The `docker` group is created, but no users
 
 ### Start Docker
 
-`sudo systemctl start docker`
+* Run `sudo systemctl start docker`
 
 ### Verify Docker Engine
 
-`sudo docker run hello-world`
+* Run `sudo docker run hello-world`
 
 This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits.
 
@@ -57,24 +39,22 @@ If you don’t want to preface the `docker` command with `sudo`, create a Unix g
 
 ### Create the Docker Group
 
-`sudo groupadd docker`
+* Run `sudo groupadd docker`
 
 ### Add User to the Docker Group
 
-`sudo usermod -aG docker $USER`
+* Run `sudo usermod -aG docker $USER`
 
 Log out and log back in so that your group membership is re-evaluated.
 
 * If testing on a virtual machine, it may be necessary to restart the virtual machine for changes to take effect.
 * On a desktop Linux environment such as X Windows, log out of your session completely and then log back in.
 * On Linux, you can also run the following command to activate the changes to groups:
-
-    `newgrp docker`
+`newgrp docker`
 
 ### Verify
 
 Verify that you can run docker commands without `sudo`.
-
 `docker run hello-world`
 
 This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits.
@@ -88,35 +68,31 @@ stat /home/user/.docker/config.json: permission denied
 
 To fix this problem, either remove the `~/.docker/` directory (it is recreated automatically, but any custom settings are lost), or change its ownership and permissions using the following commands:
 
-`sudo chown "$USER":"$USER" /home/"$USER"/.docker -R`
-
-`sudo chmod g+rwx "$HOME/.docker" -R`
+* Run `sudo chown "$USER":"$USER" /home/"$USER"/.docker -R`
+* Run `sudo chmod g+rwx "$HOME/.docker" -R`
 
 ## Start on Boot
 
 Configure Docker to start on boot
 
-`sudo systemctl enable docker.service`
-
-`sudo systemctl enable containerd.service`
+* `sudo systemctl enable docker.service`
+* `sudo systemctl enable containerd.service`
 
 To disable this behavior, use disable instead.
 
-`sudo systemctl disable docker.service`
-
-`sudo systemctl disable containerd.service`
+* `sudo systemctl disable docker.service`
+* `sudo systemctl disable containerd.service`
 
 ## Uninstall Docker Engine
 
 To uninstall the Docker Engine, CLI, and Containerd packages, run the below command
 
-`sudo yum remove docker-ce docker-ce-cli containerd.io`
+* `sudo yum remove docker-ce docker-ce-cli containerd.io`
 
 Images, containers, volumes, or customized configuration files on your host are not automatically removed. To delete all images, containers, and volumes, run the below command
 
-`sudo rm -rf /var/lib/docker`
-
-`sudo rm -rf /var/lib/containerd`
+* `sudo rm -rf /var/lib/docker`
+* `sudo rm -rf /var/lib/containerd`
 
 You must delete any edited configuration files manually.
 

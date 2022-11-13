@@ -1,0 +1,27 @@
+site_name: Home User Guides
+
+nav:
+  - 'Home': 'index.md'
+  - 'Cent OS':
+    - 'Instalaltion':
+      - 'Install VS Code': 'centos/installation/install-vscode.md'
+      - 'Install MongoDB': 'centos/installation/install-mongodb.md'
+      - 'Install Robo 3T': 'centos/installation/install-robo3t.md'
+      - 'Install Java': 'centos/installation/install-java.md'
+      - 'Install Docker': 'centos/installation/install-docker.md'
+      - 'Install Docker Compose': 'centos/installation/install-docker-compose.md'
+    - 'Change Hostname': 'centos/change-hostname.md'
+    - 'Disable Sleep': 'centos/disable-sleep.md'
+    - 'SSH Banner': 'centos/ssh-banner.md'
+    - 'Static IP': 'centos/static-ip.md'
+    - 'Temperature Sensors': 'centos/temperature-sensors.md'
+  - 'Ubuntu':
+    - 'Softwares List': 'ubuntu/softwares-list.md'
+    - 'Installation':
+      - 'Install GIT': 'ubuntu/installation/install-git.md'
+      - 'Install VS Code': 'ubuntu/installation/install-vscode.md'
+      - 'Install Python': 'ubuntu/installation/install-python.md'
+      - 'Install MkDocs': 'ubuntu/installation/install-mkdocs.md'
+
+theme:
+  name: material
