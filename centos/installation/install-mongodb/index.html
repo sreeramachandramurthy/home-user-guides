@@ -778,17 +778,24 @@ gpgcheck=1
 enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc
 </code></pre>
-<h3 id="install-mongo-db">Install Mongo DB</h3>
 <ul>
 <li>Run <code>yum repolist</code></li>
-<li><code>sudo yum install mongodb-org</code></li>
+</ul>
+<h3 id="install-mongo-db">Install Mongo DB</h3>
+<ul>
+<li>Open Terminal</li>
+<li>Run <code>sudo yum install mongodb-org</code></li>
 </ul>
 <h2 id="configuration">Configuration</h2>
 <ul>
 <li>Open Terminal</li>
-<li>Edit MongoDB configuration file
-<code>vi /etc/mongod.conf</code></li>
-<li>Change <code>bindIp</code> to the ip address of the machine.</li>
+<li>
+<p>Edit MongoDB configuration file</p>
+<p><code>vi /etc/mongod.conf</code></p>
+</li>
+<li>
+<p>Change <code>bindIp</code> to the ip address of the machine.</p>
+</li>
 </ul>
 <h2 id="service">Service</h2>
 <ul>
@@ -801,18 +808,19 @@ gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc
 <h2 id="logs">Logs</h2>
 <ul>
 <li>Open Terminal</li>
-<li>Run <code>sudo tail /var/log/mongodb/mongod.log</code></li>
+<li>Run <code>sudo tail /var/log/mongodb/mongod.log</code> to tail the MongoDB logs</li>
 </ul>
 <h2 id="firewall">Firewall</h2>
 <ul>
+<li>Open Terminal</li>
 <li>Run <code>sudo firewall-cmd --zone=public --add-port=27017/tcp --permanent</code> to open port <code>27017</code></li>
-<li>Run <code>sudo firewall-cmd --reload</code> to reload firewall service</li>
+<li>Run <code>sudo firewall-cmd --reload</code> to reload firewall service and apply the firewall rules</li>
 </ul>
 <h2 id="process">Process</h2>
 <ul>
 <li>Open Terminal</li>
-<li>Run <code>ps -ef | grep mongo</code></li>
-<li>Run <code>netstat -an | grep 27017</code></li>
+<li>Run <code>ps -ef | grep mongo</code> to get the process ID of MongoDB</li>
+<li>Run <code>netstat -an | grep 27017</code> to check the MongoDB port</li>
 </ul>
 <h2 id="references">References</h2>
 <ul>
