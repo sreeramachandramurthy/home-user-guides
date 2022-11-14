@@ -19,6 +19,7 @@ nav:
     - 'Softwares List': 'ubuntu/softwares-list.md'
     - 'Installation':
       - 'Install GIT': 'ubuntu/installation/install-git.md'
+      - 'Install Java': 'ubuntu/installation/install-java.md'
       - 'Install VS Code': 'ubuntu/installation/install-vscode.md'
       - 'Install Python': 'ubuntu/installation/install-python.md'
       - 'Install MkDocs': 'ubuntu/installation/install-mkdocs.md'
