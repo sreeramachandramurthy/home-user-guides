@@ -23,6 +23,7 @@ nav:
       - 'Install VS Code': 'ubuntu/installation/install-vscode.md'
       - 'Install Python': 'ubuntu/installation/install-python.md'
       - 'Install MkDocs': 'ubuntu/installation/install-mkdocs.md'
+      - 'Install Glances': 'ubuntu/installation/install-glances.md'
 
 theme:
   name: material
