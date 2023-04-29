@@ -10,6 +10,7 @@ nav:
       - 'Install Java': 'centos/installation/install-java.md'
       - 'Install Docker': 'centos/installation/install-docker.md'
       - 'Install Docker Compose': 'centos/installation/install-docker-compose.md'
+      - 'Install Python': 'centos/installation/install-python.md'
     - 'Change Hostname': 'centos/change-hostname.md'
     - 'Disable Sleep': 'centos/disable-sleep.md'
     - 'SSH Banner': 'centos/ssh-banner.md'
@@ -24,6 +25,8 @@ nav:
       - 'Install Python': 'ubuntu/installation/install-python.md'
       - 'Install MkDocs': 'ubuntu/installation/install-mkdocs.md'
       - 'Install Glances': 'ubuntu/installation/install-glances.md'
+      - 'Install Kodi': 'ubuntu/installation/install-kodi.md'
+      - 'Install SNMP': 'ubuntu/installation/install-snmp.md'
 
 theme:
   name: material

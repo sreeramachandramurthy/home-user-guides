@@ -29,7 +29,7 @@ Description=Glances
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/glances -w
+ExecStart=/usr/local/bin/glances -t 300 -w
 Restart=on-abort
 RemainAfterExit=yes
 
@@ -46,6 +46,14 @@ sudo systemctl start glances.service
 sudo systemctl status glances.service
 sudo systemctl enable glances.service
 ```
+
+## Commands
+
+| Type         | Command                  |
+| ------------ | ------------------------ |
+| Version      | `glances -V`             |
+| Web Server   | `glances -w`             |
+| Refresh Rate | `glances -t 5` 5 seconds |
 
 ## References
 
