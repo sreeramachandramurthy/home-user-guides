@@ -27,6 +27,7 @@ nav:
       - 'Install Glances': 'ubuntu/installation/install-glances.md'
       - 'Install Kodi': 'ubuntu/installation/install-kodi.md'
       - 'Install SNMP': 'ubuntu/installation/install-snmp.md'
+      - 'Install MySQL Workbench': 'ubuntu/installation/install-mysql-workbench.md'
 
 theme:
   name: material
