@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../install-java/">
+        <link rel="prev" href="../install-docker-compose/">
       
       
-        <link rel="next" href="../install-docker-compose/">
+        <link rel="next" href="../../change-hostname/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
     
     
       
-        <title>Install Docker - Home User Guides</title>
+        <title>Install Python - Home User Guides</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#install-docker-ce" class="md-skip">
+        <a href="#install-pyhton" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Install Docker
+              Install Python
             
           </span>
         </div>
@@ -315,141 +315,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Install Docker
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../install-docker/" class="md-nav__link">
         Install Docker
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#direct-installation" class="md-nav__link">
-    Direct Installation
-  </a>
-  
-    <nav class="md-nav" aria-label="Direct Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setup-the-yum-repository" class="md-nav__link">
-    Setup the YUM Repository
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#install-docker-engine" class="md-nav__link">
-    Install Docker Engine
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#start-docker" class="md-nav__link">
-    Start Docker
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verify-docker-engine" class="md-nav__link">
-    Verify Docker Engine
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-installation" class="md-nav__link">
-    Post Installation
-  </a>
-  
-    <nav class="md-nav" aria-label="Post Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-the-docker-group" class="md-nav__link">
-    Create the Docker Group
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-user-to-the-docker-group" class="md-nav__link">
-    Add User to the Docker Group
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verify" class="md-nav__link">
-    Verify
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#start-on-boot" class="md-nav__link">
-    Start on Boot
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uninstall-docker-engine" class="md-nav__link">
-    Uninstall Docker Engine
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -473,11 +343,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../install-python/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Install Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Install Python
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-steps" class="md-nav__link">
+    Installation Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -802,97 +720,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#direct-installation" class="md-nav__link">
-    Direct Installation
-  </a>
-  
-    <nav class="md-nav" aria-label="Direct Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setup-the-yum-repository" class="md-nav__link">
-    Setup the YUM Repository
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#install-docker-engine" class="md-nav__link">
-    Install Docker Engine
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#start-docker" class="md-nav__link">
-    Start Docker
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verify-docker-engine" class="md-nav__link">
-    Verify Docker Engine
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-installation" class="md-nav__link">
-    Post Installation
-  </a>
-  
-    <nav class="md-nav" aria-label="Post Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-the-docker-group" class="md-nav__link">
-    Create the Docker Group
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-user-to-the-docker-group" class="md-nav__link">
-    Add User to the Docker Group
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verify" class="md-nav__link">
-    Verify
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#start-on-boot" class="md-nav__link">
-    Start on Boot
+  <a href="#installation-steps" class="md-nav__link">
+    Installation Steps
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#uninstall-docker-engine" class="md-nav__link">
-    Uninstall Docker Engine
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
+  <a href="#commands" class="md-nav__link">
+    Commands
   </a>
   
 </li>
@@ -912,95 +748,19 @@
                   
 
 
-<h1 id="install-docker-ce">Install Docker CE</h1>
-<h2 id="direct-installation">Direct Installation</h2>
-<p>Install and update Docker from the YUM repository</p>
-<h3 id="setup-the-yum-repository">Setup the YUM Repository</h3>
+<h1 id="install-pyhton">Install Pyhton</h1>
+<h2 id="installation-steps">Installation Steps</h2>
 <ul>
-<li>
-<p>Install the <code>yum-utils</code> package (which provides the <code>yum-config-manager</code> utility) and set up the repository</p>
-<p><code>sudo yum install -y yum-utils</code></p>
-</li>
-<li>
-<p>Run <code>sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</code></p>
-</li>
+<li>Open Termial</li>
+<li>Run <code>sudo yum install epel-release</code></li>
+<li>Run <code>sudo yum install python</code></li>
+<li>Run <code>sudo yum install python-pip</code></li>
+<li>Run <code>sudo yum groupinstall 'development tools'</code></li>
 </ul>
-<h3 id="install-docker-engine">Install Docker Engine</h3>
+<h2 id="commands">Commands</h2>
 <ul>
-<li>
-<p>Install the latest version of Docker Engine and containerd</p>
-<p><code>sudo yum install docker-ce docker-ce-cli containerd.io</code></p>
-</li>
-</ul>
-<p>If prompted to accept the GPG key, verify that the fingerprint matches <code>060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35</code>, and if so, accept it.</p>
-<p>Docker is installed but not started. The <code>docker</code> group is created, but no users are added to the group.</p>
-<h3 id="start-docker">Start Docker</h3>
-<ul>
-<li>Run <code>sudo systemctl start docker</code></li>
-</ul>
-<h3 id="verify-docker-engine">Verify Docker Engine</h3>
-<ul>
-<li>Run <code>sudo docker run hello-world</code></li>
-</ul>
-<p>This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits.</p>
-<p>Docker Engine is installed and running. You need to use <code>sudo</code> to run Docker commands.</p>
-<h2 id="post-installation">Post Installation</h2>
-<p>The Docker daemon binds to a Unix socket instead of a TCP port. By default that Unix socket is owned by the user <code>root</code> and other users can only access it using <code>sudo</code>. The Docker daemon always runs as the <code>root</code> user.</p>
-<p>If you don’t want to preface the <code>docker</code> command with <code>sudo</code>, create a Unix group called <code>docker</code> and add users to it. When the Docker daemon starts, it creates a Unix socket accessible by members of the <code>docker</code> group.</p>
-<h3 id="create-the-docker-group">Create the Docker Group</h3>
-<ul>
-<li>Run <code>sudo groupadd docker</code></li>
-</ul>
-<h3 id="add-user-to-the-docker-group">Add User to the Docker Group</h3>
-<ul>
-<li>Run <code>sudo usermod -aG docker $USER</code></li>
-</ul>
-<p>Log out and log back in so that your group membership is re-evaluated.</p>
-<ul>
-<li>If testing on a virtual machine, it may be necessary to restart the virtual machine for changes to take effect.</li>
-<li>On a desktop Linux environment such as X Windows, log out of your session completely and then log back in.</li>
-<li>
-<p>On Linux, you can also run the following command to activate the changes to groups</p>
-<p><code>newgrp docker</code></p>
-</li>
-</ul>
-<h3 id="verify">Verify</h3>
-<p>Verify that you can run docker commands without <code>sudo</code>.</p>
-<pre><code>`docker run hello-world`
-</code></pre>
-<p>This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits.</p>
-<blockquote>
-<p>If you initially ran Docker CLI commands using <code>sudo</code> before adding your user to the docker group, you may see the following error, which indicates that your <code>~/.docker/</code> directory was created with incorrect permissions due to the <code>sudo</code> commands.</p>
-</blockquote>
-<pre><code class="language-bash">WARNING: Error loading config file: /home/user/.docker/config.json -
-stat /home/user/.docker/config.json: permission denied
-</code></pre>
-<p>To fix this problem, either remove the <code>~/.docker/</code> directory (it is recreated automatically, but any custom settings are lost), or change its ownership and permissions using the following commands:</p>
-<pre><code class="language-bash">sudo chown &quot;$USER&quot;:&quot;$USER&quot; /home/&quot;$USER&quot;/.docker -R
-sudo chmod g+rwx &quot;$HOME/.docker&quot; -R
-</code></pre>
-<h2 id="start-on-boot">Start on Boot</h2>
-<p>Configure Docker to start on boot</p>
-<pre><code class="language-bash">sudo systemctl enable docker.service
-sudo systemctl enable containerd.service
-</code></pre>
-<p>To disable this behavior, use disable instead.</p>
-<pre><code class="language-bash">sudo systemctl disable docker.service
-sudo systemctl disable containerd.service
-</code></pre>
-<h2 id="uninstall-docker-engine">Uninstall Docker Engine</h2>
-<p>To uninstall the Docker Engine, CLI, and Containerd packages, run the below command</p>
-<pre><code>`sudo yum remove docker-ce docker-ce-cli containerd.io`
-</code></pre>
-<p>Images, containers, volumes, or customized configuration files on your host are not automatically removed. To delete all images, containers, and volumes, run the below command</p>
-<pre><code class="language-bash">sudo rm -rf /var/lib/docker
-sudo rm -rf /var/lib/containerd
-</code></pre>
-<p>You must delete any edited configuration files manually.</p>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://docs.docker.com/engine/install/centos/">Install Docker CE on CentOS</a></li>
-<li><a href="https://docs.docker.com/engine/install/linux-postinstall/">Post Install on Linux</a></li>
+<li>Version - <code>pip --version</code></li>
+<li>List of Installed Packages - <code>pip list</code></li>
 </ul>
 
 
