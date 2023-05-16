@@ -825,15 +825,21 @@
 <h3 id="set-up-the-repository">Set up the Repository</h3>
 <p>Update the apt package index and install packages to allow apt to use a repository over HTTPS</p>
 <ul>
-<li>Open Terminal</li>
+<li>Open Terminal<ul>
 <li>Run <code>sudo apt-get update</code></li>
 <li>Run <code>sudo apt-get install ca-certificates curl gnupg</code></li>
-<li>Add Docker’s official GPG key</li>
+</ul>
+</li>
+<li>Add Docker’s official GPG key<ul>
 <li>Run <code>sudo install -m 0755 -d /etc/apt/keyrings</code></li>
 <li>Run <code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg</code></li>
 <li>Run <code>sudo chmod a+r /etc/apt/keyrings/docker.gpg</code></li>
-<li>Set up the Repository</li>
+</ul>
+</li>
+<li>Set up the Repository<ul>
 <li>Run <code>echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu "$(. /etc/os-release &amp;&amp; echo "$VERSION_CODENAME")" stable" | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</code></li>
+</ul>
+</li>
 </ul>
 <h3 id="install-docker-engine">Install Docker Engine</h3>
 <ul>
