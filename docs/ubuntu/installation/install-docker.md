@@ -9,14 +9,14 @@ Before you install Docker Engine for the first time on a new host machine, you n
 Update the apt package index and install packages to allow apt to use a repository over HTTPS
 
 * Open Terminal
-  * Run `sudo apt-get update`
-  * Run `sudo apt-get install ca-certificates curl gnupg`
+    * Run `sudo apt-get update`
+    * Run `sudo apt-get install ca-certificates curl gnupg`
 * Add Docker’s official GPG key
-  * Run `sudo install -m 0755 -d /etc/apt/keyrings`
-  * Run `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg`
-  * Run `sudo chmod a+r /etc/apt/keyrings/docker.gpg`
+    * Run `sudo install -m 0755 -d /etc/apt/keyrings`
+    * Run `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg`
+    * Run `sudo chmod a+r /etc/apt/keyrings/docker.gpg`
 * Set up the Repository
-  * Run `echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null`
+    * Run `echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null`
 
 ### Install Docker Engine
 
