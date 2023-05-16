@@ -6,8 +6,9 @@ Before you install Docker Engine for the first time on a new host machine, you n
 
 ### Set up the Repository
 
+Update the apt package index and install packages to allow apt to use a repository over HTTPS
+
 * Open Terminal
-* Update the apt package index and install packages to allow apt to use a repository over HTTPS
   * Run `sudo apt-get update`
   * Run `sudo apt-get install ca-certificates curl gnupg`
 * Add Docker’s official GPG key
