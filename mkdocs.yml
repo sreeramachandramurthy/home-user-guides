@@ -29,6 +29,7 @@ nav:
       - 'Install SNMP': 'ubuntu/installation/install-snmp.md'
       - 'Install MySQL Workbench': 'ubuntu/installation/install-mysql-workbench.md'
       - 'Install Docker CE': 'ubuntu/installation/install-docker.md'
+      - 'Install FreeCAD': 'ubuntu/installation/install-freecad.md'
 
 theme:
   name: material
