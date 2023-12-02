@@ -4,14 +4,14 @@ repo_url: https://github.com/sreeramachandramurthy/home-user-guides
 nav:
   - 'Home': 'index.md'
   - 'Cent OS':
-    - 'Instalaltion':
-      - 'Install VS Code': 'centos/installation/install-vscode.md'
-      - 'Install MongoDB': 'centos/installation/install-mongodb.md'
-      - 'Install Robo 3T': 'centos/installation/install-robo3t.md'
-      - 'Install Java': 'centos/installation/install-java.md'
-      - 'Install Docker': 'centos/installation/install-docker.md'
+    - 'Installation':
       - 'Install Docker Compose': 'centos/installation/install-docker-compose.md'
+      - 'Install Docker': 'centos/installation/install-docker.md'
+      - 'Install Java': 'centos/installation/install-java.md'
+      - 'Install MongoDB': 'centos/installation/install-mongodb.md'
       - 'Install Python': 'centos/installation/install-python.md'
+      - 'Install Robo 3T': 'centos/installation/install-robo3t.md'
+      - 'Install VS Code': 'centos/installation/install-vscode.md'
     - 'Change Hostname': 'centos/change-hostname.md'
     - 'Disable Sleep': 'centos/disable-sleep.md'
     - 'SSH Banner': 'centos/ssh-banner.md'
@@ -20,24 +20,24 @@ nav:
   - 'Ubuntu':
     - 'Softwares List': 'ubuntu/softwares-list.md'
     - 'Installation':
-      - 'Install GIT': 'ubuntu/installation/install-git.md'
-      - 'Install Java': 'ubuntu/installation/install-java.md'
-      - 'Install VS Code': 'ubuntu/installation/install-vscode.md'
-      - 'Install Python': 'ubuntu/installation/install-python.md'
-      - 'Install MkDocs': 'ubuntu/installation/install-mkdocs.md'
-      - 'Install Glances': 'ubuntu/installation/install-glances.md'
-      - 'Install Kodi': 'ubuntu/installation/install-kodi.md'
-      - 'Install SNMP': 'ubuntu/installation/install-snmp.md'
-      - 'Install MySQL': 'ubuntu/installation/install-mysql.md'
-      - 'Install MySQL Workbench': 'ubuntu/installation/install-mysql-workbench.md'
+      - 'Install Discord': 'ubuntu/installation/install-discord.md'
       - 'Install Docker CE': 'ubuntu/installation/install-docker.md'
       - 'Install FreeCAD': 'ubuntu/installation/install-freecad.md'
-      - 'Install Net Tools': 'ubuntu/installation/install-net-tools.md'
-      - 'Install OpenSSH': 'ubuntu/installation/install-openssh.md'
-      - 'Install Ubuntu Server': 'ubuntu/installation/install-ubuntu-server.md'
-      - 'Install Discord': 'ubuntu/installation/install-discord.md'
+      - 'Install GIT': 'ubuntu/installation/install-git.md'
+      - 'Install Glances': 'ubuntu/installation/install-glances.md'
       - 'Install GNOME Shell Extensions': 'ubuntu/installation/install-gnome-shell-extensions.md'
       - 'Install InfluxDB': 'ubuntu/installation/install-influxdb.md'
+      - 'Install Java': 'ubuntu/installation/install-java.md'
+      - 'Install Kodi': 'ubuntu/installation/install-kodi.md'
+      - 'Install MkDocs': 'ubuntu/installation/install-mkdocs.md'
+      - 'Install MySQL Workbench': 'ubuntu/installation/install-mysql-workbench.md'
+      - 'Install MySQL': 'ubuntu/installation/install-mysql.md'
+      - 'Install Net Tools': 'ubuntu/installation/install-net-tools.md'
+      - 'Install OpenSSH': 'ubuntu/installation/install-openssh.md'
+      - 'Install Python': 'ubuntu/installation/install-python.md'
+      - 'Install SNMP': 'ubuntu/installation/install-snmp.md'
+      - 'Install Ubuntu Server': 'ubuntu/installation/install-ubuntu-server.md'
+      - 'Install VS Code': 'ubuntu/installation/install-vscode.md'
 
 theme:
   name: material
@@ -60,4 +60,4 @@ theme:
       scheme: slate
       toggle:
         icon: material/brightness-4
-        name: Switch to System Preference
+        name: Switch to System preference
