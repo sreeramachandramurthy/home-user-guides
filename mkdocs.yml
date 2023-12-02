@@ -1,4 +1,5 @@
 site_name: Home User Guides
+repo_url: https://github.com/sreeramachandramurthy/home-user-guides
 
 nav:
   - 'Home': 'index.md'
@@ -40,3 +41,23 @@ nav:
 
 theme:
   name: material
+  features:
+    - navigation.expand
+  palette:
+    # Palette toggle for Automatic Mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to Light Mode
+    # Palette toggle for Light Mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to Dark Mode
+    # Palette toggle for Dark Mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to System Preference
