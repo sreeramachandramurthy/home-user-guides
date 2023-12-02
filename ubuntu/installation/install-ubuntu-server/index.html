@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migrate-from-ubuntu-desktop-to-ubuntu-server" class="md-skip">
+        <a href="#ubuntu-server" class="md-skip">
           Skip to content
         </a>
       
@@ -1213,16 +1213,23 @@
   
 
 
-<h1 id="migrate-from-ubuntu-desktop-to-ubuntu-server">Migrate from Ubuntu Desktop to Ubuntu Server</h1>
+<h1 id="ubuntu-server">Ubuntu Server</h1>
+<p>Migrate from Ubuntu Desktop to Ubuntu Server</p>
 <h2 id="steps">Steps</h2>
 <ul>
 <li>Open Terminal</li>
-<li>Run <code>sudo apt install ubuntu-server</code></li>
-<li>Run <code>reboot</code></li>
-<li>Run <code>sudo systemctl set-default multi-user.target</code></li>
-<li>Run <code>reboot</code></li>
-<li>Run <code>sudo apt purge ubuntu-desktop -y &amp;&amp; sudo apt autoremove -y &amp;&amp; sudo apt autoclean</code></li>
-<li>Run <code>reboot</code></li>
+<li>Install Ubuntu Server<br />
+<code>sudo apt install ubuntu-server</code></li>
+<li>Reboot the Server<br />
+<code>reboot</code></li>
+<li>Enable Multi User<br />
+<code>sudo systemctl set-default multi-user.target</code></li>
+<li>Reboot the Server<br />
+<code>reboot</code></li>
+<li>Remove Ubunut Desktop<br />
+<code>sudo apt purge ubuntu-desktop -y &amp;&amp; sudo apt autoremove -y &amp;&amp; sudo apt autoclean</code></li>
+<li>Reboot the Server<br />
+<code>reboot</code></li>
 </ul>
 
 
