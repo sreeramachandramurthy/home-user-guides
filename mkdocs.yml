@@ -30,6 +30,7 @@ nav:
       - 'Install Java': 'ubuntu/installation/install-java.md'
       - 'Install Kodi': 'ubuntu/installation/install-kodi.md'
       - 'Install MkDocs': 'ubuntu/installation/install-mkdocs.md'
+      - 'Install Mosquitto': 'ubuntu/installation/install-mosquitto.md'
       - 'Install MySQL Workbench': 'ubuntu/installation/install-mysql-workbench.md'
       - 'Install MySQL': 'ubuntu/installation/install-mysql.md'
       - 'Install Net Tools': 'ubuntu/installation/install-net-tools.md'
