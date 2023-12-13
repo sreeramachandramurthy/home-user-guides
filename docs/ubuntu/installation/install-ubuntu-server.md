@@ -14,6 +14,6 @@ Migrate from Ubuntu Desktop to Ubuntu Server
 * Reboot the Server  
   `reboot`
 * Remove Ubunut Desktop  
- `sudo apt purge ubuntu-desktop -y && sudo apt autoremove -y && sudo apt autoclean`
+  `sudo apt purge ubuntu-desktop -y && sudo apt autoremove -y && sudo apt autoclean`
 * Reboot the Server  
   `reboot`
