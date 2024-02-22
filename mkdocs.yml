@@ -40,10 +40,24 @@ nav:
       - 'Install Ubuntu Server': 'ubuntu/installation/install-ubuntu-server.md'
       - 'Install VS Code': 'ubuntu/installation/install-vscode.md'
 
+extra_css:
+  - extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+
 theme:
   name: material
   features:
     - navigation.expand
+    - content.code.copy
   palette:
     # Palette toggle for Automatic Mode
     - media: "(prefers-color-scheme)"
