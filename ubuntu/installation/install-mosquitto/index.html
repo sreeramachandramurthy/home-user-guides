@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../extra.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1264,16 +1266,16 @@
 <code>mosquitto -version</code></li>
 <li>Remove anonymous access (create an account)  </li>
 </ul>
-<pre><code class="language-bash">sudo mosquitto_passwd -c /etc/mosquitto/passwd &lt;username&gt;
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mosquitto_passwd<span class="w"> </span>-c<span class="w"> </span>/etc/mosquitto/passwd<span class="w"> </span>&lt;username&gt;
 Password:
-Reenter password:
-</code></pre>
+Reenter<span class="w"> </span>password:
+</code></pre></div>
 <ul>
 <li>Update the default configuration at <code>/etc/mosquitto/conf.d/default.conf</code>  </li>
 </ul>
-<pre><code class="language-txt">listener 1883
+<div class="highlight"><pre><span></span><code>listener 1883
 password_file /etc/mosquitto/passwd
-</code></pre>
+</code></pre></div>
 <ul>
 <li>Update the file permissions for the password file<br />
 <code>sudo chmod 666 etc/mosquitto/passwd</code></li>
@@ -1329,7 +1331,7 @@ password_file /etc/mosquitto/passwd
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>

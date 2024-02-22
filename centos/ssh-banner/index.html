@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../../extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1183,15 +1185,15 @@
 <li>Open Terminal</li>
 <li>Edit file <code>vi /etc/greetings.txt</code></li>
 </ul>
-<pre><code class="language-txt">#####################################
+<div class="highlight"><pre><span></span><code>#####################################
 #    WELCOME TO RAM-SERVER          #
 #####################################
-</code></pre>
+</code></pre></div>
 <ul>
 <li>Edit file <code>vi /etc/ssh/sshd_config</code></li>
 </ul>
-<pre><code class="language-txt">Banner /etc/greetings.txt
-</code></pre>
+<div class="highlight"><pre><span></span><code>Banner /etc/greetings.txt
+</code></pre></div>
 <ul>
 <li>Restart service <code>systemctl restart sshd</code></li>
 </ul>
@@ -1233,7 +1235,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>

@@ -44,6 +44,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../extra.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1153,6 +1155,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Installation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#through-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Through APT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#through-deb-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Through DEB Package
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1212,6 +1238,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Installation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#through-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Through APT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#through-deb-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Through DEB Package
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1234,11 +1284,56 @@
 
 <h1 id="install-vs-code">Install VS Code</h1>
 <h2 id="installation-steps">Installation Steps</h2>
+<h3 id="through-apt">Through APT</h3>
+<p>Open Terminal and execute the below commands to install Visual Studio Code through APT</p>
+<ul>
+<li>Install Dependencies</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>wget<span class="w"> </span>gpg
+</code></pre></div>
+<ul>
+<li>Download Keys</li>
+</ul>
+<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-qO-<span class="w"> </span>https://packages.microsoft.com/keys/microsoft.asc<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>&gt;<span class="w"> </span>packages.microsoft.gpg
+</code></pre></div>
+<ul>
+<li>Install Keys</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>install<span class="w"> </span>-D<span class="w"> </span>-o<span class="w"> </span>root<span class="w"> </span>-g<span class="w"> </span>root<span class="w"> </span>-m<span class="w"> </span><span class="m">644</span><span class="w"> </span>packages.microsoft.gpg<span class="w"> </span>/etc/apt/keyrings/packages.microsoft.gpg
+</code></pre></div>
+<ul>
+<li>Add APT Repository</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo &quot;deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main&quot; &gt; /etc/apt/sources.list.d/vscode.list&#39;</span>
+</code></pre></div>
+<ul>
+<li>Clean Up Keys</li>
+</ul>
+<div class="highlight"><pre><span></span><code>rm<span class="w"> </span>-f<span class="w"> </span>packages.microsoft.gpg
+</code></pre></div>
+<ul>
+<li>Install Dependencies</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apt-transport-https
+</code></pre></div>
+<ul>
+<li>Update Package Cache</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
+<ul>
+<li>Install VS Code</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>code
+</code></pre></div>
+<h3 id="through-deb-package">Through DEB Package</h3>
 <ul>
 <li>Download the DEB package from <a href="https://code.visualstudio.com/download" title="VS Code Download">https://code.visualstudio.com/download</a></li>
 <li>Open Terminal and navigate to the downloaded path</li>
-<li>Run <code>sudo apt install ./&lt;filename.deb&gt;</code></li>
+<li>Run the below command to install from the downloaded DEB file</li>
 </ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./&lt;filename.deb&gt;<span class="sb">`</span>
+</code></pre></div>
 
 
 
@@ -1277,7 +1372,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>

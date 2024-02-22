@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../extra.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1516,30 +1518,30 @@
 <blockquote>
 <p>If you initially ran Docker CLI commands using <code>sudo</code> before adding your user to the docker group, you may see the following error, which indicates that your <code>~/.docker/</code> directory was created with incorrect permissions due to the <code>sudo</code> commands.</p>
 </blockquote>
-<pre><code class="language-bash">WARNING: Error loading config file: /home/user/.docker/config.json -
-stat /home/user/.docker/config.json: permission denied
-</code></pre>
+<div class="highlight"><pre><span></span><code>WARNING:<span class="w"> </span>Error<span class="w"> </span>loading<span class="w"> </span>config<span class="w"> </span>file:<span class="w"> </span>/home/user/.docker/config.json<span class="w"> </span>-
+stat<span class="w"> </span>/home/user/.docker/config.json:<span class="w"> </span>permission<span class="w"> </span>denied
+</code></pre></div>
 <p>To fix this problem, either remove the <code>~/.docker/</code> directory (it is recreated automatically, but any custom settings are lost), or change its ownership and permissions using the following commands:</p>
-<pre><code class="language-bash">sudo chown &quot;$USER&quot;:&quot;$USER&quot; /home/&quot;$USER&quot;/.docker -R
-sudo chmod g+rwx &quot;$HOME/.docker&quot; -R
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span>:<span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span><span class="w"> </span>/home/<span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span>/.docker<span class="w"> </span>-R
+sudo<span class="w"> </span>chmod<span class="w"> </span>g+rwx<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.docker&quot;</span><span class="w"> </span>-R
+</code></pre></div>
 <h2 id="start-on-boot">Start on Boot</h2>
 <p>Configure Docker to start on boot</p>
-<pre><code class="language-bash">sudo systemctl enable docker.service
-sudo systemctl enable containerd.service
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>docker.service
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>containerd.service
+</code></pre></div>
 <p>To disable this behavior, use disable instead.</p>
-<pre><code class="language-bash">sudo systemctl disable docker.service
-sudo systemctl disable containerd.service
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>docker.service
+sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>containerd.service
+</code></pre></div>
 <h2 id="uninstall-docker-engine">Uninstall Docker Engine</h2>
 <p>To uninstall the Docker Engine, CLI, and Containerd packages, run the below command</p>
 <pre><code>`sudo yum remove docker-ce docker-ce-cli containerd.io`
 </code></pre>
 <p>Images, containers, volumes, or customized configuration files on your host are not automatically removed. To delete all images, containers, and volumes, run the below command</p>
-<pre><code class="language-bash">sudo rm -rf /var/lib/docker
-sudo rm -rf /var/lib/containerd
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/docker
+sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/containerd
+</code></pre></div>
 <p>You must delete any edited configuration files manually.</p>
 <h2 id="references">References</h2>
 <ul>
@@ -1584,7 +1586,7 @@ sudo rm -rf /var/lib/containerd
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
