@@ -61,5 +61,5 @@ sudo apt install code
 * Run the below command to install from the downloaded DEB file
 
 ```bash
-sudo apt install ./<filename.deb>`
+sudo apt install ./<filename.deb>
 ```
