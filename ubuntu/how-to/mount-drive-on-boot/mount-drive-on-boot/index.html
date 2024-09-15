@@ -773,6 +773,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1360,6 +1369,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1386,22 +1404,22 @@
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>/media/ram/caddy
 </code></pre></div>
 <ul>
-<li>Get drive UUID and Type</li>
+<li>Get the attached drive's UUID and Type</li>
 </ul>
 <div class="highlight"><pre><span></span><code>lsblk<span class="w"> </span>-o<span class="w"> </span>NAME,FSTYPE,UUID,MOUNTPOINTS
 </code></pre></div>
 <ul>
-<li>Edit <code>fstab</code> to add drive details</li>
+<li>Edit <code>fstab</code> to add attached drive's details</li>
 </ul>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>vi<span class="w"> </span>/etc/fstab
 </code></pre></div>
 <ul>
-<li>Add entry for drive</li>
+<li>Add entry for the attached drive</li>
 </ul>
 <div class="highlight"><pre><span></span><code>UUID=xxxx-xxxx-xxxx-xxxx-xxxx    /media/ram/caddy    ext4    defaults    0    0
 </code></pre></div>
 <ul>
-<li>Test <code>fstab</code>
+<li>Test <code>fstab</code><br />
   Test <code>fstab</code> before rebooting as an invalid <code>fstab</code> can render a disk unbootable</li>
 </ul>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>findmnt<span class="w"> </span>--verify
@@ -1411,6 +1429,10 @@
 </ul>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>reboot
 </code></pre></div>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://developerinsider.co/auto-mount-drive-in-ubuntu-server-22-04-at-startup/">https://developerinsider.co/auto-mount-drive-in-ubuntu-server-22-04-at-startup/</a></li>
+</ol>
 
 
 
