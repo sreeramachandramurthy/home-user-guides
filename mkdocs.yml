@@ -19,6 +19,8 @@ nav:
     - 'Temperature Sensors': 'centos/temperature-sensors.md'
   - 'Ubuntu':
     - 'Softwares': 'ubuntu/softwares.md'
+    - 'How To':
+      - 'Mount Drive on Boot': 'ubuntu/how-to/mount-drive-on-boot/mount-drive-on-boot.md'
     - 'Installation':
       - 'Install Discord': 'ubuntu/installation/install-discord.md'
       - 'Install Docker CE': 'ubuntu/installation/install-docker.md'
