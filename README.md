@@ -45,3 +45,8 @@ Alternatively you can install the latest packages and dependencies
   `source .venv/bin/activate`
 * Deactivate the Virtual Environment  
   `deactivate`
+
+### Upgrade MkDocs
+
+* Upgrade MkDocs & MkDocs Material  
+  `pip install --upgrade --force-reinstall mkdocs-material`
