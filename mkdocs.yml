@@ -37,6 +37,7 @@ nav:
       - 'Install MySQL Workbench': 'ubuntu/installation/install-mysql-workbench.md'
       - 'Install MySQL': 'ubuntu/installation/install-mysql.md'
       - 'Install Net Tools': 'ubuntu/installation/install-net-tools.md'
+      - 'Install Node & NPM': 'ubuntu/installation/install-node-npm.md'
       - 'Install OpenSSH': 'ubuntu/installation/install-openssh.md'
       - 'Install PuddleTAG': 'ubuntu/installation/install-puddletag.md'
       - 'Install Python': 'ubuntu/installation/install-python.md'
