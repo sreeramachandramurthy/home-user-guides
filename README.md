@@ -46,7 +46,7 @@ Alternatively you can install the latest packages and dependencies
 * Deactivate the Virtual Environment  
   `deactivate`
 
-### Upgrade MkDocs
+### Upgrade MkDocs & MkDocs Material
 
 * Upgrade MkDocs & MkDocs Material  
   `pip install --upgrade --force-reinstall mkdocs-material`
