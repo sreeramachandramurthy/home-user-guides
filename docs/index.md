@@ -2,20 +2,20 @@
 
 <div class="grid cards" markdown>
 
--   :fontawesome-brands-ubuntu:{ .lg .middle } __Ubuntu__
+-   :fontawesome-brands-ubuntu:{ .lg .middle } __Operating System__
 
     ---
 
-    Tutorials, Guides and Installation Steps for Ubuntu
+    Tutorials, Guides and Installation Steps for various operating systems - Ubuntu, CentOS, etc
 
-    [:octicons-arrow-right-24: More](ubuntu/softwares.md)
+    [:octicons-arrow-right-24: More](os/index.md)
 
--   :fontawesome-brands-linux:{ .lg .middle } __Cent OS__
+-   :fontawesome-brands-linux:{ .lg .middle } __Tools__
 
     ---
 
-    Tutorials, Guides and Installation Steps for Cent OS
+    Tutorials and Guides of various applications and tools.
 
-    [:octicons-arrow-right-24: More](centos/index.md)
+    [:octicons-arrow-right-24: More](tools/index.md)
 
 </div>

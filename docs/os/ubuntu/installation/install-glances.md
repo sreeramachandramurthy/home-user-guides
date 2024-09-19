@@ -3,33 +3,70 @@
 ## Installation Steps
 
 * Open Terminal
-* Install Glances  
-  `sudo apt install glances`
+* Install Glances
+
+```bash
+sudo apt install glances
+```
 
 ## Enable Glances Web UI
 
 The Package version of Glances does not include the Web UI. Copy Web UI JS static files from full version of Glances to the current installed version.
 
 * Open Terminal
-* Capture the installed version of Glances  
-  `sudo glances -V`
-* Export the Glances version to an environmental variable  
-  `export GLANCES_VERSION="X.X.X.X"`
-* Download full version of Glances  
-  `wget https://github.com/nicolargo/glances/archive/refs/tags/v${GLANCES_VERSION}.tar.gz`
-* Extract the compressed file  
-  `tar zxvf v${GLANCES_VERSION}.tar.gz`
-* Copy Web UI JS static files to installation location  
-  `sudo cp -r glances-${GLANCES_VERSION}/glances/outputs/static/public/ /usr/lib/python3/dist-packages/glances/outputs/static/`
-* Whitelist UI Port  
-  `sudo ufw allow 61208/tcp`
-* Install optional Plugins  
-  `sudo python3 -m pip install pySMART`
-* Start Glances  
-  `glances -t 300 -w --enable-plugin smart`
+* Capture the installed version of Glances
+
+```bash
+sudo glances -V
+```
+
+* Export the Glances version to an environmental variable
+
+```bash
+export GLANCES_VERSION="X.X.X.X"
+```
+
+* Download full version of Glances
+
+```bash
+wget https://github.com/nicolargo/glances/archive/refs/tags/v${GLANCES_VERSION}.tar.gz
+```
+
+* Extract the compressed file
+
+```bash
+tar zxvf v${GLANCES_VERSION}.tar.gz
+```
+
+* Copy Web UI JS static files to installation location
+
+```bash
+sudo cp -r glances-${GLANCES_VERSION}/glances/outputs/static/public/ /usr/lib/python3/dist-packages/glances/outputs/static/
+```
+
+* Whitelist UI Port
+
+```bash
+sudo ufw allow 61208/tcp
+```
+
+* Install optional Plugins
+
+```bash
+sudo python3 -m pip install pySMART
+```
+
+* Start Glances
+
+```bash
+glances -t 300 -w --enable-plugin smart
+```
+
 * Open Web UI at <http://localhost:61208/>
 
 ## Enable Auto Start
+
+Enable Glances to start after system boot
 
 * Open Terminal
 * Create a service file in `systemd`  
