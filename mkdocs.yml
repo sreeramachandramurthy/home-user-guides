@@ -35,6 +35,7 @@ nav:
         - 'Install Glances': 'os/ubuntu/installation/install-glances.md'
         - 'Install GNOME Shell Extensions': 'os/ubuntu/installation/install-gnome-shell-extensions.md'
         - 'Install InfluxDB': 'os/ubuntu/installation/install-influxdb.md'
+        - 'Install InfluxDB2': 'os/ubuntu/installation/install-influxdb2.md'
         - 'Install Java': 'os/ubuntu/installation/install-java.md'
         - 'Install Kodi': 'os/ubuntu/installation/install-kodi.md'
         - 'Install MkDocs': 'os/ubuntu/installation/install-mkdocs.md'
