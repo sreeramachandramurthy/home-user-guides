@@ -24,6 +24,7 @@ nav:
       - 'Softwares': 'os/ubuntu/softwares.md'
       - 'How To':
         - 'Mount Drive on Boot': 'os/ubuntu/how-to/mount-drive-on-boot/mount-drive-on-boot.md'
+        - 'Remove Snap': 'os/ubuntu/how-to/remove-snap/remove-snap.md'
       - 'Installation':
         - 'Install Arduino IDE': 'os/ubuntu/installation/install-arduino-ide.md'
         - 'Install Discord': 'os/ubuntu/installation/install-discord.md'
