@@ -12,7 +12,7 @@
         <link rel="prev" href="../install-gnome-shell-extensions/">
       
       
-        <link rel="next" href="../install-java/">
+        <link rel="next" href="../install-influxdb2/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#install-influxdb2" class="md-skip">
+        <a href="#install-influxdb" class="md-skip">
           Skip to content
         </a>
       
@@ -1204,18 +1204,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-influxdb2-as-a-service" class="md-nav__link">
+  <a href="#install-influxdb-as-a-service" class="md-nav__link">
     <span class="md-ellipsis">
-      Install InfluxDB2 as a Service
+      Install InfluxDB as a Service
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#config-the-influxdb2" class="md-nav__link">
+  <a href="#config-influxdb" class="md-nav__link">
     <span class="md-ellipsis">
-      Config the InfluxDB2
+      Config InfluxDB
     </span>
   </a>
   
@@ -1231,9 +1231,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gui" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      GUI
+      References
     </span>
   </a>
   
@@ -1243,6 +1243,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install-influxdb2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install InfluxDB2
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1767,18 +1788,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-influxdb2-as-a-service" class="md-nav__link">
+  <a href="#install-influxdb-as-a-service" class="md-nav__link">
     <span class="md-ellipsis">
-      Install InfluxDB2 as a Service
+      Install InfluxDB as a Service
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#config-the-influxdb2" class="md-nav__link">
+  <a href="#config-influxdb" class="md-nav__link">
     <span class="md-ellipsis">
-      Config the InfluxDB2
+      Config InfluxDB
     </span>
   </a>
   
@@ -1794,9 +1815,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gui" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      GUI
+      References
     </span>
   </a>
   
@@ -1820,46 +1841,81 @@
   
 
 
-<h1 id="install-influxdb2">Install InfluxDB2</h1>
-<h2 id="install-influxdb2-as-a-service">Install InfluxDB2 as a Service</h2>
+<h1 id="install-influxdb">Install InfluxDB</h1>
+<h2 id="install-influxdb-as-a-service">Install InfluxDB as a Service</h2>
 <ul>
 <li>Open Terminal</li>
-<li>Update the Ubuntu System<br />
-<code>sudo apt update</code></li>
-<li>Add the GPG Fingerprint<br />
-<code>wget -q https://repos.influxdata.com/influxdata-archive_compat.key</code><br />
-<code>echo '393e8779c89ac8d958f81f942f9ad7fb82a25e133faddaf92e15b16e6ac9ce4c influxdata-archive_compat.key' | sha256sum -c &amp;&amp; cat influxdata-archive_compat.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg &gt; /dev/null</code>  </li>
-<li>Add the InfluxDB2 to the Repo List<br />
-<code>echo 'deb [signed-by=/etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg] https://repos.influxdata.com/debian stable main' | sudo tee /etc/apt/sources.list.d/influxdata.list</code></li>
-<li>Update the Ubuntu System<br />
-<code>sudo apt update</code></li>
-<li>Install InfluxDB<br />
-<code>sudo apt install influxdb2</code></li>
-<li>Check Version of InfluxDB<br />
-<code>influx version</code></li>
-<li>Start the InfluxDB as a Service<br />
-<code>sudo systemctl start influxdb</code></li>
-<li>Verify the InfluxDB Installation<br />
-<code>sudo service influxdb status</code></li>
+<li>Update the Ubuntu System</li>
 </ul>
-<h2 id="config-the-influxdb2">Config the InfluxDB2</h2>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
 <ul>
-<li>Start the Service<br />
-<code>sudo service influxdb start</code></li>
-<li>Restart the Service<br />
-<code>sudo service influxdb restart</code></li>
-<li>Stop the Service<br />
-<code>sudo service influxdb stop</code></li>
-<li>Enable the Service<br />
-<code>sudo systemctl enable influxdb</code></li>
+<li>Add the GPG fingerprint</li>
 </ul>
+<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-q<span class="w"> </span>https://repos.influxdata.com/influxdata-archive_compat.key<span class="sb">`</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;393e8779c89ac8d958f81f942f9ad7fb82a25e133faddaf92e15b16e6ac9ce4c influxdata-archive_compat.key&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sha256sum<span class="w"> </span>-c<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>cat<span class="w"> </span>influxdata-archive_compat.key<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+</code></pre></div>
+<ul>
+<li>Add the InfluxDB to the repository list</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;deb [signed-by=/etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg] https://repos.influxdata.com/debian stable main&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/influxdata.list
+</code></pre></div>
+<ul>
+<li>Update the Ubuntu System</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
+<ul>
+<li>Install InfluxDB</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>influxdb
+</code></pre></div>
+<ul>
+<li>Check Version of InfluxDB</li>
+</ul>
+<div class="highlight"><pre><span></span><code>influx<span class="w"> </span>-version
+</code></pre></div>
+<ul>
+<li>Start the InfluxDB as a Service</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>influxdb
+</code></pre></div>
+<ul>
+<li>Verify the InfluxDB installation</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>influxdb<span class="w"> </span>status
+</code></pre></div>
+<h2 id="config-influxdb">Config InfluxDB</h2>
+<ul>
+<li>Start the Service</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>influxdb<span class="w"> </span>start
+</code></pre></div>
+<ul>
+<li>Restart the Service</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>influxdb<span class="w"> </span>restart
+</code></pre></div>
+<ul>
+<li>Stop the Service</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>influxdb<span class="w"> </span>stop
+</code></pre></div>
+<ul>
+<li>Enable the Service</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>influxdb
+</code></pre></div>
 <h2 id="config-firewall">Config Firewall</h2>
 <ul>
-<li>Whitelist InfluxDB in Firewall<br />
-<code>sudo ufw allow 8086/tcp</code></li>
+<li>Whitelist InfluxDB in Firewall</li>
 </ul>
-<h2 id="gui">GUI</h2>
-<p><a href="http://localhost:8086">http://localhost:8086</a></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">8086</span>/tcp
+</code></pre></div>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://docs.influxdata.com/influxdb/v1/introduction/install/">https://docs.influxdata.com/influxdb/v1/introduction/install/</a></li>
+</ol>
 
 
 

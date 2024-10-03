@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../install-puddletag/">
+        <link rel="prev" href="../install-influxdb/">
       
       
-        <link rel="next" href="../install-snmp/">
+        <link rel="next" href="../install-java/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Install Python - Home User Guides</title>
+        <title>Install InfluxDB2 - Home User Guides</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#install-python" class="md-skip">
+        <a href="#install-influxdb2" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Install Python
+              Install InfluxDB2
             
           </span>
         </div>
@@ -1176,10 +1176,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../install-influxdb2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Install InfluxDB2
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1188,6 +1208,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-influxdb2-as-a-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install InfluxDB2 as a Service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-the-influxdb2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Config the InfluxDB2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      Config Firewall
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      GUI
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1407,30 +1483,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Install Python
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../install-python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1439,35 +1495,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation Steps
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1761,9 +1788,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation-steps" class="md-nav__link">
+  <a href="#install-influxdb2-as-a-service" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation Steps
+      Install InfluxDB2 as a Service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-the-influxdb2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Config the InfluxDB2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      Config Firewall
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      GUI
     </span>
   </a>
   
@@ -1787,13 +1841,46 @@
   
 
 
-<h1 id="install-python">Install Python</h1>
-<h2 id="installation-steps">Installation Steps</h2>
+<h1 id="install-influxdb2">Install InfluxDB2</h1>
+<h2 id="install-influxdb2-as-a-service">Install InfluxDB2 as a Service</h2>
 <ul>
 <li>Open Terminal</li>
-<li>Run <code>sudo apt install python3</code></li>
-<li>Run <code>sudo apt install python3-pip</code></li>
+<li>Update the Ubuntu System<br />
+<code>sudo apt update</code></li>
+<li>Add the GPG Fingerprint<br />
+<code>wget -q https://repos.influxdata.com/influxdata-archive_compat.key</code><br />
+<code>echo '393e8779c89ac8d958f81f942f9ad7fb82a25e133faddaf92e15b16e6ac9ce4c influxdata-archive_compat.key' | sha256sum -c &amp;&amp; cat influxdata-archive_compat.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg &gt; /dev/null</code>  </li>
+<li>Add the InfluxDB2 to the Repo List<br />
+<code>echo 'deb [signed-by=/etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg] https://repos.influxdata.com/debian stable main' | sudo tee /etc/apt/sources.list.d/influxdata.list</code></li>
+<li>Update the Ubuntu System<br />
+<code>sudo apt update</code></li>
+<li>Install InfluxDB<br />
+<code>sudo apt install influxdb2</code></li>
+<li>Check Version of InfluxDB<br />
+<code>influx version</code></li>
+<li>Start the InfluxDB as a Service<br />
+<code>sudo systemctl start influxdb</code></li>
+<li>Verify the InfluxDB Installation<br />
+<code>sudo service influxdb status</code></li>
 </ul>
+<h2 id="config-the-influxdb2">Config the InfluxDB2</h2>
+<ul>
+<li>Start the Service<br />
+<code>sudo service influxdb start</code></li>
+<li>Restart the Service<br />
+<code>sudo service influxdb restart</code></li>
+<li>Stop the Service<br />
+<code>sudo service influxdb stop</code></li>
+<li>Enable the Service<br />
+<code>sudo systemctl enable influxdb</code></li>
+</ul>
+<h2 id="config-firewall">Config Firewall</h2>
+<ul>
+<li>Whitelist InfluxDB in Firewall<br />
+<code>sudo ufw allow 8086/tcp</code></li>
+</ul>
+<h2 id="gui">GUI</h2>
+<p><a href="http://localhost:8086">http://localhost:8086</a></p>
 
 
 
