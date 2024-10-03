@@ -12,11 +12,11 @@
         <link rel="prev" href="../../../softwares/">
       
       
-        <link rel="next" href="../../../installation/install-arduino-ide/">
+        <link rel="next" href="../../remove-snap/remove-snap/">
       
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -948,6 +948,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       Steps
@@ -969,6 +978,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../remove-snap/remove-snap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Remove Snap
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1728,6 +1758,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       Steps
@@ -1764,14 +1803,19 @@
 
 
 <h1 id="how-to-mount-drive-on-boot">How to Mount Drive on Boot</h1>
+<h2 id="overview">Overview</h2>
+<p>When we connect an external drive, by default, Linux OS (or Ubuntu Server) doesn't automount the external drive at startup. We can mount the drive using the <code>mount</code> command manually but we can also enable automount feature on startup. This feature avoids us to mount the drive again after restarting or logging into Linux OS.</p>
 <h2 id="steps">Steps</h2>
 <ul>
-<li>Create a directory for mounting the attached drive</li>
+<li>Create a directory for mounting the attached drive  <blockquote>
+<p>Normally mount directories are created in <code>/media</code>  </p>
+</blockquote>
+</li>
 </ul>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>/media/ram/caddy
 </code></pre></div>
 <ul>
-<li>Get the attached drive's UUID and Type</li>
+<li>Get the attached drive's UUID and and File System Type</li>
 </ul>
 <div class="highlight"><pre><span></span><code>lsblk<span class="w"> </span>-o<span class="w"> </span>NAME,FSTYPE,UUID,MOUNTPOINTS
 </code></pre></div>
@@ -1781,13 +1825,18 @@
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>vi<span class="w"> </span>/etc/fstab
 </code></pre></div>
 <ul>
-<li>Add entry for the attached drive</li>
+<li>Add entry for the attached drive  <blockquote>
+<p>Values are seperated by <code>TAB</code></p>
+</blockquote>
+</li>
 </ul>
 <div class="highlight"><pre><span></span><code>UUID=xxxx-xxxx-xxxx-xxxx-xxxx    /media/ram/caddy    ext4    defaults    0    0
 </code></pre></div>
 <ul>
-<li>Test <code>fstab</code><br />
-  Test <code>fstab</code> before rebooting as an invalid <code>fstab</code> can render a disk unbootable</li>
+<li>Test <code>fstab</code>  <blockquote>
+<p>Test <code>fstab</code> before rebooting as an invalid <code>fstab</code> can render a disk unbootable</p>
+</blockquote>
+</li>
 </ul>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>findmnt<span class="w"> </span>--verify
 </code></pre></div>
@@ -1846,10 +1895,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.copy", "navigation.tabs", "navigation.path"], "search": "../../../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.copy", "navigation.tabs", "navigation.path"], "search": "../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>
