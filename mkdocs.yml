@@ -45,6 +45,7 @@ nav:
         - 'Install Net Tools': 'os/ubuntu/installation/install-net-tools.md'
         - 'Install Node & NPM': 'os/ubuntu/installation/install-node-npm.md'
         - 'Install OpenSSH': 'os/ubuntu/installation/install-openssh.md'
+        - 'Install Portainer': 'os/ubuntu/installation/install-portainer.md'
         - 'Install PuddleTAG': 'os/ubuntu/installation/install-puddletag.md'
         - 'Install Python': 'os/ubuntu/installation/install-python.md'
         - 'Install SNMP': 'os/ubuntu/installation/install-snmp.md'
