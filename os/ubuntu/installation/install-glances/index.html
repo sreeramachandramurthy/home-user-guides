@@ -1192,15 +1192,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#enable-glances-web-ui" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable Glances Web UI
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#enable-auto-start" class="md-nav__link">
     <span class="md-ellipsis">
       Enable Auto Start
@@ -1210,9 +1201,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#service" class="md-nav__link">
+  <a href="#whitelist-ui-port" class="md-nav__link">
     <span class="md-ellipsis">
-      Service
+      Whitelist UI Port
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web UI
     </span>
   </a>
   
@@ -1224,6 +1224,30 @@
       Commands
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemctl-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      SystemCtl Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1857,15 +1881,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#enable-glances-web-ui" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable Glances Web UI
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#enable-auto-start" class="md-nav__link">
     <span class="md-ellipsis">
       Enable Auto Start
@@ -1875,9 +1890,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#service" class="md-nav__link">
+  <a href="#whitelist-ui-port" class="md-nav__link">
     <span class="md-ellipsis">
-      Service
+      Whitelist UI Port
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web UI
     </span>
   </a>
   
@@ -1889,6 +1913,30 @@
       Commands
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemctl-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      SystemCtl Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1921,97 +1969,63 @@
 
 <h1 id="glances">Glances</h1>
 <h2 id="installation-steps">Installation Steps</h2>
+<p>Open Terminal and execute the below commands to install Glances through PipX</p>
 <ul>
-<li>Open Terminal</li>
-<li>Install Glances</li>
+<li>Install dependant packages</li>
 </ul>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>glances
-</code></pre></div>
-<h2 id="enable-glances-web-ui">Enable Glances Web UI</h2>
-<p>The Package version of Glances does not include the Web UI. Copy Web UI JS static files from full version of Glances to the current installed version.</p>
-<ul>
-<li>Open Terminal</li>
-<li>Capture the installed version of Glances</li>
-</ul>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>glances<span class="w"> </span>-V
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3<span class="w"> </span>python3-pip<span class="w"> </span>pipx
+pipx<span class="w"> </span>ensurepath
 </code></pre></div>
 <ul>
-<li>Export the Glances version to an environmental variable</li>
+<li>Close and re-open Terminal</li>
+<li>Install Glances with PipX</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">GLANCES_VERSION</span><span class="o">=</span><span class="s2">&quot;X.X.X.X&quot;</span>
+<div class="highlight"><pre><span></span><code>pipx<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;glances[all]&#39;</span>
 </code></pre></div>
-<ul>
-<li>Download full version of Glances</li>
-</ul>
-<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://github.com/nicolargo/glances/archive/refs/tags/v<span class="si">${</span><span class="nv">GLANCES_VERSION</span><span class="si">}</span>.tar.gz
-</code></pre></div>
-<ul>
-<li>Extract the compressed file</li>
-</ul>
-<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>zxvf<span class="w"> </span>v<span class="si">${</span><span class="nv">GLANCES_VERSION</span><span class="si">}</span>.tar.gz
-</code></pre></div>
-<ul>
-<li>Copy Web UI JS static files to installation location</li>
-</ul>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span>glances-<span class="si">${</span><span class="nv">GLANCES_VERSION</span><span class="si">}</span>/glances/outputs/static/public/<span class="w"> </span>/usr/lib/python3/dist-packages/glances/outputs/static/
-</code></pre></div>
-<ul>
-<li>Whitelist UI Port</li>
-</ul>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">61208</span>/tcp
-</code></pre></div>
-<ul>
-<li>Install optional Plugins</li>
-</ul>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pySMART
-</code></pre></div>
-<ul>
-<li>Start Glances</li>
-</ul>
-<div class="highlight"><pre><span></span><code>glances<span class="w"> </span>-t<span class="w"> </span><span class="m">300</span><span class="w"> </span>-w<span class="w"> </span>--enable-plugin<span class="w"> </span>smart
-</code></pre></div>
-<ul>
-<li>Open Web UI at <a href="http://localhost:61208/">http://localhost:61208/</a></li>
-</ul>
 <h2 id="enable-auto-start">Enable Auto Start</h2>
-<p>Enable Glances to start after system boot</p>
+<p>Open Terminal and execute the below commands to enable Glances to start after system boot</p>
 <ul>
-<li>Open Terminal</li>
-<li>Create a service file in <code>systemd</code><br />
-<code>sudo vi /etc/systemd/system/glances.service</code></li>
+<li>Create a service file in <code>systemd</code></li>
 </ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>vi<span class="w"> </span>/etc/systemd/system/glances.service
+</code></pre></div>
 <div class="highlight"><pre><span></span><code>[Unit]
 Description=Glances
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/glances -t 300 -w --enable-plugin smart
+ExecStart=/home/${USER}/.local/bin/glances -t 300 -w
 Restart=on-abort
 RemainAfterExit=yes
-localhost
+
 [Install]
 WantedBy=multi-user.target
 </code></pre></div>
 <ul>
-<li>Reload SystemCTL Daemon<br />
-<code>sudo systemctl daemon-reload</code></li>
-<li>Restart Glances<br />
-<code>sudo systemctl start glances</code></li>
+<li>Reload SystemCtl Daemon</li>
 </ul>
-<h2 id="service">Service</h2>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
+</code></pre></div>
 <ul>
-<li>Start the Service<br />
-<code>sudo systemctl start glances</code></li>
-<li>Restart the Service<br />
-<code>sudo systemctl restart glances</code></li>
-<li>Stop the Service<br />
-<code>sudo systemctl stop glances</code></li>
-<li>Enable the Service<br />
-<code>sudo systemctl enable glances</code></li>
-<li>Status of the Service<br />
-<code>sudo systemctl status glances</code></li>
+<li>Start Glances</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>glances
+</code></pre></div>
+<ul>
+<li>Enable the Service</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>glances
+</code></pre></div>
+<h2 id="whitelist-ui-port">Whitelist UI Port</h2>
+<p>Open Terminal and execute the below commands to open ports for accessing the Web UI in external systems</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">61208</span>/tcp
+</code></pre></div>
+<h2 id="web-ui">Web UI</h2>
+<ul>
+<li>Open Glances Web UI at <a href="http://localhost:61208/">http://localhost:61208/</a></li>
 </ul>
 <h2 id="commands">Commands</h2>
+<h3 id="service-commands">Service Commands</h3>
 <table>
 <thead>
 <tr>
@@ -2040,6 +2054,43 @@ WantedBy=multi-user.target
 <td>Enable Plugin</td>
 <td><code>glances --enable-plugin smart</code></td>
 <td>pySMART plugin</td>
+</tr>
+</tbody>
+</table>
+<h3 id="systemctl-commands">SystemCtl Commands</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Command</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start the Service</td>
+<td><code>sudo systemctl start glances</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Stop the Service</td>
+<td><code>sudo systemctl stop glances</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Restart the Service</td>
+<td><code>sudo systemctl restart glances</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Enable the Service</td>
+<td><code>sudo systemctl enable glances</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Status of the Service</td>
+<td><code>sudo systemctl status glances</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
