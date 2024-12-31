@@ -103,15 +103,6 @@ sudo systemctl disable docker.service
 sudo systemctl disable containerd.service
 ```
 
-### Install Docker Compose
-
-* Open Terminal
-* Run the below commands to install Docker Compose
-
-```bash
-sudo apt install docker-compose-plugin
-```
-
 ## References
 
 * <https://docs.docker.com/engine/install/ubuntu/>
