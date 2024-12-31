@@ -2,75 +2,31 @@
 
 ## Installation Steps
 
-* Open Terminal
-* Install Glances
+Open Terminal and execute the below commands to install Glances through PipX
+
+* Install dependant packages
 
 ```bash
-sudo apt install glances
+sudo apt install python3 python3-pip pipx
+pipx ensurepath
 ```
 
-## Enable Glances Web UI
-
-The Package version of Glances does not include the Web UI. Copy Web UI JS static files from full version of Glances to the current installed version.
-
-* Open Terminal
-* Capture the installed version of Glances
+* Close and re-open Terminal
+* Install Glances with PipX
 
 ```bash
-sudo glances -V
+pipx install 'glances[all]'
 ```
-
-* Export the Glances version to an environmental variable
-
-```bash
-export GLANCES_VERSION="X.X.X.X"
-```
-
-* Download full version of Glances
-
-```bash
-wget https://github.com/nicolargo/glances/archive/refs/tags/v${GLANCES_VERSION}.tar.gz
-```
-
-* Extract the compressed file
-
-```bash
-tar zxvf v${GLANCES_VERSION}.tar.gz
-```
-
-* Copy Web UI JS static files to installation location
-
-```bash
-sudo cp -r glances-${GLANCES_VERSION}/glances/outputs/static/public/ /usr/lib/python3/dist-packages/glances/outputs/static/
-```
-
-* Whitelist UI Port
-
-```bash
-sudo ufw allow 61208/tcp
-```
-
-* Install optional Plugins
-
-```bash
-sudo python3 -m pip install pySMART
-```
-
-* Start Glances
-
-```bash
-glances -t 300 -w --enable-plugin smart
-```
-
-* Open Web UI at <http://localhost:61208/>
 
 ## Enable Auto Start
 
-Enable Glances to start after system boot
+Open Terminal and execute the below commands to enable Glances to start after system boot
 
-* Open Terminal
-* Create a service file in `systemd`  
-  `sudo vi /etc/systemd/system/glances.service`
+* Create a service file in `systemd`
+
+```bash
+sudo vi /etc/systemd/system/glances.service
+```
 
 ```txt
 [Unit]
@@ -78,33 +34,47 @@ Description=Glances
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/glances -t 300 -w --enable-plugin smart
+ExecStart=/home/${USER}/.local/bin/glances -t 300 -w
 Restart=on-abort
 RemainAfterExit=yes
-localhost
+
 [Install]
 WantedBy=multi-user.target
 ```
 
-* Reload SystemCTL Daemon  
-  `sudo systemctl daemon-reload`
-* Restart Glances  
-  `sudo systemctl start glances`
+* Reload SystemCtl Daemon
 
-## Service
+```bash
+sudo systemctl daemon-reload
+```
 
-* Start the Service  
-  `sudo systemctl start glances`
-* Restart the Service  
-  `sudo systemctl restart glances`
-* Stop the Service  
-  `sudo systemctl stop glances`
-* Enable the Service  
-  `sudo systemctl enable glances`
-* Status of the Service  
-  `sudo systemctl status glances`
+* Start Glances
+
+```bash
+sudo systemctl start glances
+```
+
+* Enable the Service
+
+```bash
+sudo systemctl enable glances
+```
+
+## Whitelist UI Port
+
+Open Terminal and execute the below commands to open ports for accessing the Web UI in external systems
+
+```bash
+sudo ufw allow 61208/tcp
+```
+
+## Web UI
+
+* Open Glances Web UI at <http://localhost:61208/>
 
 ## Commands
+
+### Service Commands
 
 | Type          | Command                         | Comments       |
 | ------------- | ------------------------------- | -------------- |
@@ -112,6 +82,16 @@ WantedBy=multi-user.target
 | Web Server    | `glances -w`                    |                |
 | Refresh Rate  | `glances -t 5`                  | 5 seconds      |
 | Enable Plugin | `glances --enable-plugin smart` | pySMART plugin |
+
+### SystemCtl Commands
+
+| Type                    | Command                          | Comments       |
+| ----------------------- | -------------------------------- | -------------- |
+| Start the Service       | `sudo systemctl start glances`   |                |
+| Stop the Service        | `sudo systemctl stop glances`    |                |
+| Restart the Service     | `sudo systemctl restart glances` |                |
+| Enable the Service      | `sudo systemctl enable glances`  |                |
+| Status of the Service   | `sudo systemctl status glances`  |                |
 
 ## References
 
