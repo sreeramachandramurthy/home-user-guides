@@ -28,6 +28,7 @@ nav:
         - 'Increase LVM Partition Size': 'os/ubuntu/how-to/increase-lvm-partition-size/increase-lvm-partition-size.md'
         - 'Install Firefox without Snap': 'os/ubuntu/how-to/install-firefox-without-snap/install-firefox-without-snap.md'
       - 'Installation':
+        - 'Install Android SDK': 'os/ubuntu/installation/install-android-sdk.md'
         - 'Install Arduino IDE': 'os/ubuntu/installation/install-arduino-ide.md'
         - 'Install Discord': 'os/ubuntu/installation/install-discord.md'
         - 'Install Docker CE': 'os/ubuntu/installation/install-docker.md'
