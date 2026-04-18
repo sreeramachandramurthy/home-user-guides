@@ -26,7 +26,9 @@ nav:
         - 'Mount Drive on Boot': 'os/ubuntu/how-to/mount-drive-on-boot/mount-drive-on-boot.md'
         - 'Remove Snap': 'os/ubuntu/how-to/remove-snap/remove-snap.md'
         - 'Increase LVM Partition Size': 'os/ubuntu/how-to/increase-lvm-partition-size/increase-lvm-partition-size.md'
+        - 'Install Firefox without Snap': 'os/ubuntu/how-to/install-firefox-without-snap/install-firefox-without-snap.md'
       - 'Installation':
+        - 'Install Android SDK': 'os/ubuntu/installation/install-android-sdk.md'
         - 'Install Arduino IDE': 'os/ubuntu/installation/install-arduino-ide.md'
         - 'Install Discord': 'os/ubuntu/installation/install-discord.md'
         - 'Install Docker CE': 'os/ubuntu/installation/install-docker.md'
@@ -45,6 +47,7 @@ nav:
         - 'Install MySQL': 'os/ubuntu/installation/install-mysql.md'
         - 'Install Net Tools': 'os/ubuntu/installation/install-net-tools.md'
         - 'Install Node & NPM': 'os/ubuntu/installation/install-node-npm.md'
+        - 'Install NVM': 'os/ubuntu/installation/install-nvm.md'
         - 'Install OpenSSH': 'os/ubuntu/installation/install-openssh.md'
         - 'Install Portainer': 'os/ubuntu/installation/install-portainer.md'
         - 'Install PuddleTAG': 'os/ubuntu/installation/install-puddletag.md'
