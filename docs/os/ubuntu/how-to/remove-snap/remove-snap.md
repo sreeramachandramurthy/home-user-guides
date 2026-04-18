@@ -2,7 +2,7 @@
 
 ## Disclaimer
 
-Removing `Snap` is perfectly safe as of 22.04 but may lead to unwanted behaviour.
+Removing `Snap` is perfectly safe as of Ubuntu 22.04 but may lead to unwanted behaviour.
 
 ## Steps
 
