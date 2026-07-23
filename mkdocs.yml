@@ -61,6 +61,8 @@ nav:
     - 'Index': 'tools/index.md'
     - 'GIMP':
       - 'Passport Photos': 'tools/gimp/passport-photos.md'
+    - 'GitHub':
+      - 'Configure SSH Keys for GitHub on Ubuntu Server': 'tools/github/configure-ssh-keys-for-github-on-ubuntu-server.md'
 
 extra_css:
   - extra.css
